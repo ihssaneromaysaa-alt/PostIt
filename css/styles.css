@@ -1,0 +1,116 @@
+
+/* Reinicio de estilos */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f5f9;
+    color: #252525;
+}
+
+/* Interfaz a pantalla completa */
+
+.app {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 35px;
+    background-color: #f4f5f9;
+}
+
+/* Cabecera */
+
+.cabecera {
+    margin-bottom: 30px;
+}
+
+.cabecera h1 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* Zona donde aparecerán las notas */
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+/* Estilo base de cada nota */
+
+.nota {
+    min-height: 180px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Botón flotante para añadir notas */
+
+.mas {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: #6c63ff;
+    color: white;
+
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 1;
+
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(108, 99, 255, 0.3);
+
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.mas:hover {
+    background-color: #574fe5;
+    transform: scale(1.08);
+}
+
+/* Adaptación a móviles */
+
+@media (max-width: 600px) {
+    .app {
+        padding: 24px 18px;
+    }
+
+    .cabecera h1 {
+        font-size: 24px;
+    }
+
+    .contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .mas {
+        right: 20px;
+        bottom: 20px;
+    }
+}
